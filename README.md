@@ -1,3 +1,30 @@
+Requirements
+- weather api key from: https://api.weatherapi.com
+- Run docker-compose -f infrastructure.yml up -d
+
+To run the app you can use the following command:
+```
+docker-compose -f services.yml up -d
+```
+
+create a new profile with multiple startup projects and go to (which uses Yarp):
+https://localhost:5000
+https://localhost:5000/aggregator
+https://localhost:5000/notifier
+https://localhost:5000/feeds/news
+
+
+Using load balancer with yarp:
+1. run the app in multiple instances with different ports: dotnet run --urls="http://*:5011", dotnet run --urls="http://*:5012"
+2. add this in the appsettings.json
+```
+          "destination2": {
+            "address": "http://localhost:5011"
+          },
+          "destination3": {
+            "address": "http://localhost:5012"
+          }
+```
 [![FeedR](https://cdn.devmentors.io/img/assets/feedr.jpeg)](https://www.youtube.com/watch?v=spnBzawswik)
 
 # FeedR

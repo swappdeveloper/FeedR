@@ -7,7 +7,7 @@ namespace FeedR.Feeds.Weather.Services;
 internal sealed class WeatherFeed : IWeatherFeed
 {
     //TODO: Move these values to dedicated api settings and options type
-    private const string ApiKey = "49f6e0fc8b3a4490bf1193606212812";
+    private const string ApiKey = "35f1a4c7dfe841bf9bd142219251202";
     private const string ApiUrl = "https://api.weatherapi.com/v1/current.json";
 
     private readonly HttpClient _client;
